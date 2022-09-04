@@ -8,37 +8,120 @@
     <title>Experiment with on click event</title>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <style>
+      body {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+    </style>
   </head>
 
   <script>
 
     $(document).ready(function() {
-      $("#mainVideo").click(()=>{
-        $("#mainVideo").get(0).play()
+      $("#first-video").click(()=>{
+        $("#first-video").get(0).play()
+      })
+
+      $("#third-video").click(()=>{
+        $("#third-video").get(0).play()
+      })
+
+      $("#fifth-video").click(()=>{
+        $("#fifth-video").get(0).play()
       })
 
       $(window).click(()=>{
-        $("#secondVideo").get(0).play()
+        $("#second-video").get(0).play()
+        $("#fourth-video").get(0).play()
+        $("#sixth-video").get(0).play()
       })
     })
 
   </script>
 
-  <body style="margin : 0px; overflow: hidden;">
+  <body style="margin : 0px; overflow: visible; ">
     
-    <video id="mainVideo" width="320" height="240" webkit-playsinline playsinline autoplay muted
-    loop = "true"
-    src="https://kenoafallasdlsu.github.io/SWTest/never-gonna-give.mp4" 
-    crossorigin="anonymous">
-      Cannot play video
-    </video>
+    <div class = "vid-container">
+      <h3>Click video to play</h3>
+      <video id="first-video" width="320" height="240" webkit-playsinline playsinline
+      loop = "true"
+      src="https://kenoafallasdlsu.github.io/MobileVideoExperiments/never-second.mp4" 
+      crossorigin="anonymous">
+        Cannot play video
+      </video>
+    </div>
 
-    <video id="secondVideo" width="320" height="240" webkit-playsinline playsinline autoplay muted
-    loop = "true" 
-    src="https://kenoafallasdlsu.github.io/SWTest/never-gonna-give.mp4" 
-    crossorigin="anonymous">
-      Cannot play video
-    </video>
+    <div class = "vid-container">
+      <h3>Click screen to play</h3>
+      <video id="second-video" width="320" height="240" webkit-playsinline playsinline
+      loop = "true"
+      src="https://kenoafallasdlsu.github.io/MobileVideoExperiments/never-second.mp4" 
+      crossorigin="anonymous">
+        Cannot play video
+      </video>
+    </div>
 
+    <div class = "vid-container">
+      <h3>Autoplay On, Unmuted, Click video</h3>
+      <video id="third-video" width="320" height="240" webkit-playsinline playsinline autoplay
+      loop = "true"
+      src="https://kenoafallasdlsu.github.io/MobileVideoExperiments/never-second.mp4" 
+      crossorigin="anonymous">
+        Cannot play video
+      </video>
+    </div>
+
+    <div class = "vid-container">
+      <h3>Autoplay On, Unmuted, Click screen</h3>
+      <video id="fourth-video" width="320" height="240" webkit-playsinline playsinline autoplay
+      loop = "true"
+      src="https://kenoafallasdlsu.github.io/MobileVideoExperiments/never-second.mp4" 
+      crossorigin="anonymous">
+        Cannot play video
+      </video>
+    </div>
+
+    <div class = "vid-container">
+      <h3>Autoplay On, Muted, Click video</h3>
+      <video id="fifth-video" width="320" height="240" webkit-playsinline playsinline autoplay muted
+      loop = "true"
+      src="https://kenoafallasdlsu.github.io/MobileVideoExperiments/never-second.mp4" 
+      crossorigin="anonymous">
+        Cannot play video
+      </video>
+    </div>
+
+    <div class = "vid-container">
+      <h3>Autoplay On, Muted, Click screen</h3>
+      <video id="sixth-video" width="320" height="240" webkit-playsinline playsinline autoplay muted
+      loop = "true"
+      src="https://kenoafallasdlsu.github.io/MobileVideoExperiments/never-second.mp4" 
+      crossorigin="anonymous">
+        Cannot play video
+      </video>
+    </div>
+
+    <div class = "vid-container">
+      <h3>Autoplay Muted Only</h3>
+      <video width="320" height="240" webkit-playsinline playsinline autoplay muted
+      loop = "true"
+      src="https://kenoafallasdlsu.github.io/MobileVideoExperiments/never-second.mp4" 
+      crossorigin="anonymous">
+        Cannot play video
+      </video>
+    </div>
+
+    <div class = "vid-container">
+      <h3>Autoplay Unmuted Only</h3>
+      <video width="320" height="240" webkit-playsinline playsinline autoplay
+      loop = "true"
+      src="https://kenoafallasdlsu.github.io/MobileVideoExperiments/never-second.mp4"
+      crossorigin="anonymous">
+        Cannot play video
+      </video>
+    </div>
   </body>
 </html>
