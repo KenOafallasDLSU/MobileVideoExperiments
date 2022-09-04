@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <title>Experiment with on click event</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+
+  <script>
+
+    $(document).ready(function() {
+      $("#mainVideo").click(()=>{
+        $("#mainVideo").get(0).play()
+      })
+
+      $(window).click(()=>{
+        $("#secondVideo").get(0).play()
+      })
+    })
+
+  </script>
+
+  <body style="margin : 0px; overflow: hidden;">
+    
+    <video id="mainVideo" width="320" height="240" webkit-playsinline playsinline
+    loop = "true"
+    src="https://kenoafallasdlsu.github.io/SWTest/never-gonna-give.mp4" 
+    crossorigin="anonymous">
+      Cannot play video
+    </video>
+
+    <video id="secondVideo" width="320" height="240" webkit-playsinline playsinline
+    loop = "true"
+    src="https://kenoafallasdlsu.github.io/SWTest/never-gonna-give.mp4" 
+    crossorigin="anonymous">
+      Cannot play video
+    </video>
+
+  </body>
+</html>
